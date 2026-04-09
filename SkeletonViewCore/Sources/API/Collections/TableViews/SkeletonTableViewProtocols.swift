@@ -14,7 +14,7 @@ extension UITableView {
 
 public typealias ReusableHeaderFooterIdentifier = String
 
-public protocol SkeletonTableViewDataSource: UITableViewDataSource {
+@objc public protocol SkeletonTableViewDataSource: UITableViewDataSource {
     func numSections(in collectionSkeletonView: UITableView) -> Int
     func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier
@@ -43,7 +43,7 @@ public extension SkeletonTableViewDataSource {
     func collectionSkeletonView(_ skeletonView: UITableView, prepareCellForSkeleton cell: UITableViewCell, at indexPath: IndexPath) { }
 }
 
-public protocol SkeletonTableViewDelegate: UITableViewDelegate {
+@objc public protocol SkeletonTableViewDelegate: UITableViewDelegate {
     func collectionSkeletonView(_ skeletonView: UITableView, identifierForHeaderInSection section: Int) -> ReusableHeaderFooterIdentifier?
     func collectionSkeletonView(_ skeletonView: UITableView, identifierForFooterInSection section: Int) -> ReusableHeaderFooterIdentifier?
 }

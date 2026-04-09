@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol SkeletonCollectionViewDataSource: UICollectionViewDataSource {
+@objc public protocol SkeletonCollectionViewDataSource: UICollectionViewDataSource {
     func numSections(in collectionSkeletonView: UICollectionView) -> Int
     func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier
@@ -40,4 +40,4 @@ public extension SkeletonCollectionViewDataSource {
     func collectionSkeletonView(_ skeletonView: UICollectionView, prepareViewForSkeleton view: UICollectionReusableView, at indexPath: IndexPath) { }
 }
 
-public protocol SkeletonCollectionViewDelegate: UICollectionViewDelegate { }
+@objc public protocol SkeletonCollectionViewDelegate: UICollectionViewDelegate { }

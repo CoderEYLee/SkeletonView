@@ -17,7 +17,7 @@ public enum SkeletonAppearance {
 }
 
 // codebeat:disable[TOO_MANY_IVARS]
-public class SkeletonViewAppearance {
+@objc public class SkeletonViewAppearance: NSObject {
     
     static var shared = SkeletonViewAppearance()
 
